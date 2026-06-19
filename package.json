@@ -1,0 +1,38 @@
+{
+  "name": "txpilot",
+  "version": "1.0.0",
+  "description": "A self-healing Solana transaction autopilot with Jito bundles, Yellowstone gRPC, and AI agent decision making",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc",
+    "start": "./node_modules/.bin/ts-node src/index.ts",
+    "dev": "./node_modules/.bin/nodemon --exec ./node_modules/.bin/ts-node src/index.ts"
+  },
+  "keywords": [
+    "solana",
+    "jito",
+    "yellowstone",
+    "ai-agent"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.104.2",
+    "@grpc/grpc-js": "^1.14.4",
+    "@solana/web3.js": "^1.98.4",
+    "@triton-one/yellowstone-grpc": "^5.0.9",
+    "bs58": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "google-protobuf": "^4.0.2",
+    "groq-sdk": "^1.2.1",
+    "jito-ts": "^4.2.1",
+    "long": "^5.3.2",
+    "uuid": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "@types/uuid": "^11.0.0",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
