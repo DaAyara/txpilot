@@ -247,27 +247,20 @@ async function trackBundleLifecycle(
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     try {
-      const currentSlot = await connection
-        .getSlot("processed")
-        .catch(() => submittedSlot);
-
       if (!processedFound && attempts > 2) {
-        lifecycleLogger.updateStage(bundleId, "processed", currentSlot, submittedAt);
+        const processedSlot = await connection.getSlot("processed");
+        lifecycleLogger.updateStage(bundleId, "processed", processedSlot, submittedAt);
         processedFound = true;
       }
 
       if (!confirmedFound && attempts > 5) {
-        const confirmedSlot = await connection
-          .getSlot("confirmed")
-          .catch(() => currentSlot);
+        const confirmedSlot = await connection.getSlot("confirmed");
         lifecycleLogger.updateStage(bundleId, "confirmed", confirmedSlot, submittedAt);
         confirmedFound = true;
       }
 
       if (!finalizedFound && attempts > 15) {
-        const finalizedSlot = await connection
-          .getSlot("finalized")
-          .catch(() => currentSlot);
+        const finalizedSlot = await connection.getSlot("finalized");
         lifecycleLogger.updateStage(bundleId, "finalized", finalizedSlot, submittedAt);
         finalizedFound = true;
       }
