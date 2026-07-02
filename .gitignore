@@ -143,8 +143,6 @@ vite.config.ts.timestamp-*
 .vite/
 .env
 dist/
-logs/
 .env
 dist/
-logs/
 .env
