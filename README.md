@@ -1,8 +1,8 @@
-# TxPilot — Solana Smart Transaction Autopilot
+# TxPilot - Solana Smart Transaction Autopilot
 
 > Built for the SolInfra Advanced Infrastructure Challenge
 
-A self-healing Solana transaction stack powered by Jito bundle submission, real-time slot streaming, full lifecycle tracking, and an AI agent that reasons about tip sizing and failure recovery autonomously.
+A self healing Solana transaction stack powered by Jito bundle submission, real time slot streaming, full lifecycle tracking, and an AI agent that reasons about tip sizing and failure recovery autonomously.
 
 ---
 
@@ -112,7 +112,7 @@ Diagnoses failed bundles and decides retry strategy:
 - Classifies failure type (blockhash_expired, fee_too_low, leader_skip, bundle_dropped)
 - Reasons about root cause
 - Decides whether to retry, refresh blockhash, and adjust tip
-- All retry decisions come from the agent — zero hardcoded logic
+- All retry decisions come from the agent, zero hardcoded logic
 
 Every AI decision is logged with full reasoning text for auditability.
 
@@ -124,19 +124,19 @@ Every AI decision is logged with full reasoning text for auditability.
 
 In my observed runs, the processed→confirmed delta averaged **~3,000ms** under normal conditions. This delta represents the time for the network to reach supermajority vote (66%+ stake) on the block containing the transaction.
 
-A wider delta signals network stress — validators are taking longer to communicate votes, forks are competing, or stake is concentrated in slow regions. In my logs, bundle #11 showed a processed→confirmed delta of **3,011ms** vs the average **3,374ms**, suggesting slightly faster validator convergence during that window. If this delta exceeded 5,000ms consistently, I would treat it as a congestion signal and instruct the TipOracle to move to p90 tip automatically — which is implemented in the agent's reasoning logic.
+A wider delta signals network stress, validators are taking longer to communicate votes, forks are competing, or stake is concentrated in slow regions. In my logs, bundle #11 showed a processed→confirmed delta of **3,011ms** vs the average **3,374ms**, suggesting slightly faster validator convergence during that window. If this delta exceeded 5,000ms consistently, I would treat it as a congestion signal and instruct the TipOracle to move to p90 tip automatically, which is implemented in the agent's reasoning logic.
 
-### Q2: Why should you never use finalized commitment when fetching a blockhash for a time-sensitive transaction?
+### Q2: Why should you never use finalized commitment when fetching a blockhash for a time sensitive transaction?
 
 A blockhash is valid for **150 slots** (~60 seconds). The `finalized` commitment level lags ~32 slots behind the chain tip. Fetching a finalized blockhash means starting with a 32-slot handicap — consuming 21% of the validity window before the transaction is even signed.
 
-In my retry scenarios this matters critically: a transaction that fails and needs 2–3 retry attempts has roughly 400ms per attempt overhead. Starting from `confirmed` commitment gives ~118 valid slots of headroom vs ~86 with `finalized` — a 37% improvement in retry tolerance. I use `confirmed` commitment for all blockhash fetches in TxPilot.
+In my retry scenarios this matters critically: a transaction that fails and needs 2–3 retry attempts has roughly 400ms per attempt overhead. Starting from `confirmed` commitment gives ~118 valid slots of headroom vs ~86 with `finalized`, a 37% improvement in retry tolerance. I use `confirmed` commitment for all blockhash fetches in TxPilot.
 
 ### Q3: What happens to your bundle if the Jito leader skips their slot?
 
 The bundle is **silently dropped** with no on-chain trace. Unlike a failed transaction which produces an error receipt, a skipped-leader bundle simply never appears on-chain. The bundle ID status never progresses past pending.
 
-My FailureAnalyst agent handles this by monitoring for bundle timeout — if a bundle hasn't reached `processed` within 10 slots of submission, it's classified as a potential leader skip. The agent then waits 4 slots for the next Jito leader window, refreshes the blockhash, and resubmits. This is implemented in the `leader_skip` branch of the fallback analysis logic.
+My FailureAnalyst agent handles this by monitoring for bundle timeout, if a bundle hasn't reached `processed` within 10 slots of submission, it's classified as a potential leader skip. The agent then waits 4 slots for the next Jito leader window, refreshes the blockhash, and resubmits. This is implemented in the `leader_skip` branch of the fallback analysis logic.
 
 ---
 
