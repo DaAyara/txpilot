@@ -1,0 +1,279 @@
+[
+  {
+    "bundle_id": "a29ac9d1-dae7-4dc0-af44-43179312002a",
+    "attempt": 1,
+    "submitted_at": "2026-07-02T09:30:17.984Z",
+    "submitted_slot": 473434676,
+    "tip_lamports": 220000,
+    "tip_agent_reasoning": "The current block utilization is 62%, which is relatively high and requires a higher tip to increase the chances of landing. Considering the recent tip samples and the tip statistics, the p75 tip of 220000 lamports seems like a reasonable choice, providing a balance between cost and landing probability. This tip amount offers a ~75% landing chance, which is suitable for the current network conditions and the next leader being Jito validator.",
+    "stages": {
+      "processed": {
+        "slot": 473434688,
+        "timestamp": "2026-07-02T09:30:21.757Z",
+        "delta_ms": 3773
+      },
+      "confirmed": {
+        "slot": 473434695,
+        "timestamp": "2026-07-02T09:30:24.766Z",
+        "delta_ms": 6782
+      },
+      "finalized": {
+        "slot": 473434690,
+        "timestamp": "2026-07-02T09:30:34.784Z",
+        "delta_ms": 16800
+      }
+    },
+    "outcome": "success"
+  },
+  {
+    "bundle_id": "3f57b248-d094-4148-bd29-8c162965b4af",
+    "attempt": 1,
+    "submitted_at": "2026-07-02T09:30:40.485Z",
+    "submitted_slot": 473434735,
+    "tip_lamports": 220000,
+    "tip_agent_reasoning": "Given the current block utilization of 66%, a higher tip is needed to increase the likelihood of landing. The recent tip samples suggest that tips around 200000 lamports are common, and the p75 tip of 220000 lamports provides a reasonable balance between cost and landing chance. With the next leader being Jito validator, using the p75 tip amount should provide a medium level of confidence in landing the bundle, as it corresponds to approximately a 75% landing chance.",
+    "stages": {
+      "processed": {
+        "slot": 473434746,
+        "timestamp": "2026-07-02T09:30:43.855Z",
+        "delta_ms": 3370
+      },
+      "confirmed": {
+        "slot": 473434754,
+        "timestamp": "2026-07-02T09:30:46.869Z",
+        "delta_ms": 6384
+      },
+      "finalized": {
+        "slot": 473434749,
+        "timestamp": "2026-07-02T09:30:56.881Z",
+        "delta_ms": 16396
+      }
+    },
+    "outcome": "success"
+  },
+  {
+    "bundle_id": "0a409ce5-2604-4b0f-bd67-158a7973cb1a",
+    "attempt": 1,
+    "submitted_at": "2026-07-02T09:31:02.479Z",
+    "submitted_slot": 473434793,
+    "tip_lamports": 220000,
+    "tip_agent_reasoning": "Given the high block utilization of 75%, a higher tip is needed to increase the chances of landing in the next block. The recent tip samples and tip statistics suggest that a tip of 220000 lamports, which corresponds to the p75 percentile, provides a good balance between the cost and the likelihood of success. This tip amount is high enough to account for the current network conditions, but not so high as to be excessive, thus providing a medium level of confidence.",
+    "stages": {
+      "processed": {
+        "slot": 473434804,
+        "timestamp": "2026-07-02T09:31:05.835Z",
+        "delta_ms": 3356
+      },
+      "confirmed": {
+        "slot": 473434811,
+        "timestamp": "2026-07-02T09:31:08.844Z",
+        "delta_ms": 6365
+      },
+      "finalized": {
+        "slot": 473434806,
+        "timestamp": "2026-07-02T09:31:18.859Z",
+        "delta_ms": 16380
+      }
+    },
+    "outcome": "success"
+  },
+  {
+    "bundle_id": "6728a63c-1de3-49d9-af60-116153c88964",
+    "attempt": 1,
+    "submitted_at": "2026-07-02T09:31:24.404Z",
+    "submitted_slot": 473434851,
+    "tip_lamports": 220000,
+    "tip_agent_reasoning": "Given the current block utilization of 60%, a higher tip is needed to increase the chances of landing in the next block. The recent tip samples and tip statistics indicate that a tip of 220000 lamports corresponds to the 75th percentile, which provides a reasonably high landing chance without being excessively high. This tip amount balances the need for a higher tip due to block utilization with the risk of overpaying, and since the next leader is Jito validator, a medium confidence level is assigned to this tip.",
+    "stages": {
+      "processed": {
+        "slot": 473434861,
+        "timestamp": "2026-07-02T09:31:27.774Z",
+        "delta_ms": 3370
+      },
+      "confirmed": {
+        "slot": 473434868,
+        "timestamp": "2026-07-02T09:31:30.783Z",
+        "delta_ms": 6379
+      },
+      "finalized": {
+        "slot": 473434863,
+        "timestamp": "2026-07-02T09:31:40.800Z",
+        "delta_ms": 16396
+      }
+    },
+    "outcome": "success"
+  },
+  {
+    "bundle_id": "845d1e91-186c-4a44-ad55-fb0bdd623db6",
+    "attempt": 1,
+    "submitted_at": "2026-07-02T09:31:46.357Z",
+    "submitted_slot": 473434908,
+    "tip_lamports": 220000,
+    "tip_agent_reasoning": "Considering the high block utilization of 77%, a higher tip amount is required to increase the chances of landing. The recent tip samples show a mix of high and low values, but the p75 tip of 220000 lamports seems like a reasonable target, offering a ~75% landing chance. This value is also supported by the recent tip samples, which include several bundles with similar tip amounts, making it a moderate and informed choice.",
+    "stages": {
+      "processed": {
+        "slot": 473434918,
+        "timestamp": "2026-07-02T09:31:49.711Z",
+        "delta_ms": 3354
+      },
+      "confirmed": {
+        "slot": 473434927,
+        "timestamp": "2026-07-02T09:31:52.721Z",
+        "delta_ms": 6364
+      },
+      "finalized": {
+        "slot": 473434921,
+        "timestamp": "2026-07-02T09:32:02.733Z",
+        "delta_ms": 16376
+      }
+    },
+    "outcome": "success"
+  },
+  {
+    "bundle_id": "e895f1e2-d0b4-4f19-9057-c91dc99df317",
+    "attempt": 1,
+    "submitted_at": "2026-07-02T09:32:08.278Z",
+    "submitted_slot": 473434965,
+    "tip_lamports": 220000,
+    "tip_agent_reasoning": "Given the current block utilization of 56%, a higher tip is needed to increase the chances of landing. With the next leader being Jito validator, it's essential to balance the tip amount. Considering the recent tip samples and tip statistics, using the p75 tip of 220000 lamports provides a reasonable balance between cost and landing chance, offering around a 75% chance of success, which is suitable for the current network conditions.",
+    "stages": {
+      "processed": {
+        "slot": 473434976,
+        "timestamp": "2026-07-02T09:32:11.655Z",
+        "delta_ms": 3377
+      },
+      "confirmed": {
+        "slot": 473434983,
+        "timestamp": "2026-07-02T09:32:14.667Z",
+        "delta_ms": 6389
+      },
+      "finalized": {
+        "slot": 473434978,
+        "timestamp": "2026-07-02T09:32:24.684Z",
+        "delta_ms": 16406
+      }
+    },
+    "outcome": "success"
+  },
+  {
+    "bundle_id": "c0d4d48a-f472-4d27-a3eb-78d67fd94d60",
+    "attempt": 1,
+    "submitted_at": "2026-07-02T09:32:30.150Z",
+    "submitted_slot": 473435023,
+    "tip_lamports": 220000,
+    "tip_agent_reasoning": "Given the current block utilization of 75% and the next leader being Jito validator, a higher tip is needed to increase the chances of landing. With recent tip samples ranging from 100000 to 300000 lamports, the p75 tip of 220000 lamports is chosen for a ~75% landing chance, striking a balance between cost and probability of success.",
+    "stages": {
+      "processed": {
+        "slot": 473435034,
+        "timestamp": "2026-07-02T09:32:33.524Z",
+        "delta_ms": 3374
+      },
+      "confirmed": {
+        "slot": 473435042,
+        "timestamp": "2026-07-02T09:32:36.535Z",
+        "delta_ms": 6385
+      },
+      "finalized": {
+        "slot": 473435035,
+        "timestamp": "2026-07-02T09:32:46.550Z",
+        "delta_ms": 16400
+      }
+    },
+    "outcome": "success"
+  },
+  {
+    "bundle_id": "45947510-6aa4-453a-a230-5be249a15aee",
+    "attempt": 1,
+    "submitted_at": "2026-07-02T09:32:52.776Z",
+    "submitted_slot": 473435080,
+    "tip_lamports": 220000,
+    "tip_agent_reasoning": "Given the current block utilization of 71%, a higher tip is needed to increase the chances of landing. Considering the recent tip samples and tip statistics, the p75 tip of 220000 lamports is chosen as it provides a reasonable balance between cost and landing chance. This amount is also consistent with some of the recent tip samples, suggesting it is a competitive amount for the current network conditions, and the next leader being Jito validator does not significantly alter the decision since the tip is primarily based on the network's block utilization and recent tip trends.",
+    "stages": {
+      "processed": {
+        "slot": 473435092,
+        "timestamp": "2026-07-02T09:32:56.158Z",
+        "delta_ms": 3382
+      },
+      "confirmed": {
+        "slot": 473435099,
+        "timestamp": "2026-07-02T09:32:59.171Z",
+        "delta_ms": 6395
+      },
+      "finalized": {
+        "slot": 473435095,
+        "timestamp": "2026-07-02T09:33:09.189Z",
+        "delta_ms": 16413
+      }
+    },
+    "outcome": "success"
+  },
+  {
+    "bundle_id": "4a35c978-0d72-498a-889e-8460528e59bd",
+    "attempt": 1,
+    "submitted_at": "2026-07-02T09:33:09.714Z",
+    "submitted_slot": 473435126,
+    "tip_lamports": 1,
+    "tip_agent_reasoning": "Given the current block utilization of 67%, a moderate to high tip amount is warranted to increase the chances of landing. The recent tip samples show a mix of higher and lower tip amounts, but the p75 tip of 220000 lamports provides a reasonable balance between cost and landing probability. With the next leader being Jito validator, using the p75 tip amount should provide around a 75% chance of landing, which is a relatively high confidence level.",
+    "stages": {},
+    "outcome": "failed",
+    "failure": {
+      "type": "fee_too_low",
+      "details": "Jito error: {\"code\":-32602,\"message\":\"Bundle must tip at least 1000 lamports\",\"data\":null}",
+      "agent_diagnosis": "insufficient tip",
+      "agent_retry_decision": "the bundle's tip of 1 lamport is below the minimum required of 1000 lamports and also significantly lower than the recent p75 tip of 220000 lamports, indicating it was likely outbid"
+    }
+  },
+  {
+    "bundle_id": "0ccfc8b7-042f-4b7c-919b-f00954d5116e",
+    "attempt": 2,
+    "submitted_at": "2026-07-02T09:33:10.943Z",
+    "submitted_slot": 473435129,
+    "tip_lamports": 220000,
+    "tip_agent_reasoning": "Given the current network conditions, with a block utilization of 77%, a higher tip is needed to increase the chances of landing. The recent tip samples and tip statistics suggest that a tip of 220000 lamports, which corresponds to the 75th percentile, strikes a balance between being competitive and not overly expensive. This tip amount should provide a reasonable chance of landing, around 75%, while taking into account the current block utilization and the next leader being a Jito validator.",
+    "stages": {
+      "processed": {
+        "slot": 473435140,
+        "timestamp": "2026-07-02T09:33:14.067Z",
+        "delta_ms": 3124
+      },
+      "confirmed": {
+        "slot": 473435147,
+        "timestamp": "2026-07-02T09:33:17.076Z",
+        "delta_ms": 6133
+      },
+      "finalized": {
+        "slot": 473435142,
+        "timestamp": "2026-07-02T09:33:27.091Z",
+        "delta_ms": 16148
+      }
+    },
+    "outcome": "success",
+    "retry_of": "4a35c978-0d72-498a-889e-8460528e59bd"
+  },
+  {
+    "bundle_id": "7534076b-8604-4fd5-9807-82efacc423aa",
+    "attempt": 1,
+    "submitted_at": "2026-07-02T09:34:32.712Z",
+    "submitted_slot": 473435186,
+    "tip_lamports": 210000,
+    "tip_agent_reasoning": "Considering the current block utilization of 61%, a higher tip is needed to increase the chances of landing. The recent tip samples and tip statistics suggest that a tip around the 75th percentile (p75) would be suitable. Given that the p75 is 220000 lamports, a tip of 210000 lamports is chosen, which is slightly below the p75, but still within a reasonable range to balance cost and landing chance. This tip amount should provide a good balance between cost and the likelihood of landing, especially since the next leader is Jito validator.",
+    "stages": {
+      "processed": {
+        "slot": 473435355,
+        "timestamp": "2026-07-02T09:34:36.119Z",
+        "delta_ms": 3407
+      },
+      "confirmed": {
+        "slot": 473435363,
+        "timestamp": "2026-07-02T09:34:39.129Z",
+        "delta_ms": 6417
+      },
+      "finalized": {
+        "slot": 473435358,
+        "timestamp": "2026-07-02T09:34:49.142Z",
+        "delta_ms": 16430
+      }
+    },
+    "outcome": "success"
+  }
+]
