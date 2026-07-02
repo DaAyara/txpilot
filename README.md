@@ -128,7 +128,7 @@ A wider delta signals network stress, validators are taking longer to communicat
 
 ### Q2: Why should you never use finalized commitment when fetching a blockhash for a time sensitive transaction?
 
-A blockhash is valid for **150 slots** (~60 seconds). The `finalized` commitment level lags ~32 slots behind the chain tip. Fetching a finalized blockhash means starting with a 32-slot handicap — consuming 21% of the validity window before the transaction is even signed.
+A blockhash is valid for **150 slots** (~60 seconds). The `finalized` commitment level lags ~32 slots behind the chain tip. Fetching a finalized blockhash means starting with a 32-slot handicap, consuming 21% of the validity window before the transaction is even signed.
 
 In my retry scenarios this matters critically: a transaction that fails and needs 2–3 retry attempts has roughly 400ms per attempt overhead. Starting from `confirmed` commitment gives ~118 valid slots of headroom vs ~86 with `finalized`, a 37% improvement in retry tolerance. I use `confirmed` commitment for all blockhash fetches in TxPilot.
 
