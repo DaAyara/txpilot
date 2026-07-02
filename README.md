@@ -101,7 +101,7 @@ pnpm start
 TxPilot has two AI agents powered by LLaMA 3.3 70B via Groq:
 
 ### TipOracle
-Analyzes real-time network conditions and decides the optimal tip:
+Analyzes real time network conditions and decides the optimal tip:
 - Samples recent tip account transactions
 - Calculates p50/p75/p90/p95 percentiles
 - Reads current block utilization
